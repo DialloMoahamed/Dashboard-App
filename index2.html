@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+        /* ── Animated background ── */
+        body {
+            min-height: 100vh;
+            overflow-x: hidden;
+            font-family: inherit;
+        }
+
+      .bg {
+  animation: slide 13s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #414141 50%, #626262 50%);
+  bottom: 0;
+  left: -50%;
+  opacity: 0.5;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
+}
+
+.bg2 {
+  animation-direction: alternate-reverse;
+  animation-duration: 11s;
+}
+
+.bg3 {
+  animation-duration: 15s;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(25%);
+  }
+}
+
+        /* ── Glass card utility ── */
+        .glass {
+            background-color: rgba(129, 129, 129, 0.68) !important;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.25) !important;
+        }
+
+        /* ── Sidebar ── */
+        #sidebar {
+            width: 280px;
+            min-height: 100vh;
+            transition: transform 0.3s ease;
+            z-index: 1045;
+        }
+
+        /* On mobile the sidebar slides in from the left */
+        @media (max-width: 767.98px) {
+            #sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                transform: translateX(-100%);
+            }
+            #sidebar.show {
+                transform: translateX(0);
+            }
+        }
+
+        /* On md+ the sidebar is always visible */
+        @media (min-width: 768px) {
+            #sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        /* ── Sidebar nav links ── */
+        .sidebar-link {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.5rem 0.75rem;
+            border-radius: 0.5rem;
+            transition: background 0.2s;
+        }
+        .sidebar-link:hover {
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+        }
+
+        /* ── Overlay for mobile sidebar ── */
+        #sidebarOverlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 1040;
+        }
+        #sidebarOverlay.show { display: block; }
+
+        /* ── Main content offset on md+ ── */
+        @media (min-width: 768px) {
+            #mainContent {
+                margin-left: 290px;
+            }
+        }
+
+        /* ── Map placeholder ── */
+        .map-placeholder {
+            background: rgba(255,255,255,0.07);
+            border-radius: 0.75rem;
+            min-height: 260px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* ── Notification / message items ── */
+        .notif-item {
+            background-color: rgba(211, 208, 208, 0.25);
+            border-radius: 0.4rem;
+            padding: 0.5rem 0.75rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .notif-item.alt {
+            background-color: transparent;
+        }
+
+        /* ── Legend dots ── */
+        .legend-dot {
+            width: 38px;
+            height: 16px;
+            border-radius: 3px;
+            flex-shrink: 0;
+        }
+
+        /* ── Scrollable content area ── */
+        #scrollArea {
+            max-height: calc(100vh - 90px);
+            overflow-y: auto;
+            padding-right: 4px;
+        }
+        #scrollArea::-webkit-scrollbar { width: 5px; }
+        #scrollArea::-webkit-scrollbar-track { background: transparent; }
+        #scrollArea::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.3); border-radius: 10px; }
+    </style>
+</head>
+
+<body class="text-white">
+
+
+    <!-- Animated background -->
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <div class="bg bg4"></div>
+
+    <!-- Sidebar overlay (mobile) -->
+    <div id="sidebarOverlay" onclick="closeSidebar()"></div>
+
+    <!-- ══════════ SIDEBAR ══════════ -->
+    <div id="sidebar" class="glass p-3 d-flex flex-column">
+        <!-- Logo -->
+        <div class="text-center py-3 border-bottom border-white border-opacity-25 mb-4">
+            <!-- Fallback text logo if image not found -->
+            <div class="fw-bold fs-4 text-white d-flex align-items-center justify-content-center gap-2">
+                <i class="bi bi-grid-3x3-gap-fill text-warning"></i>
+                <span>Admin Panel</span>
+            </div>
+        </div>
+
+        <!-- Nav -->
+        <ul class="list-unstyled flex-grow-1">
+            <li class="mb-2">
+                <a href="#" class="sidebar-link">
+                    <i class="bi bi-speedometer2"></i> Dashboard
+                </a>
+            </li>
+            <li class="mb-2">
+                <a href="#" class="sidebar-link">
+                    <i class="bi bi-people"></i> Utilisateurs
+                </a>
+            </li>
+            <li class="mb-2">
+                <a href="#" class="sidebar-link">
+                    <i class="bi bi-chat-dots"></i> Messagerie
+                </a>
+            </li>
+            <li class="mb-2">
+                <a href="#" class="sidebar-link">
+                    <i class="bi bi-check2-square"></i> Tâches
+                </a>
+            </li>
+            <li class="mb-2">
+                <a href="#" class="sidebar-link">
+                    <i class="bi bi-calendar3"></i> Calendrier
+                </a>
+            </li>
+            <li class="mb-2">
+                <a href="#" class="sidebar-link">
+                    <i class="bi bi-person-circle"></i> Compte
+                </a>
+            </li>
+        </ul>
+
+        <!-- Footer -->
+        <div class="text-center text-white-50 small border-top border-white border-opacity-25 pt-3">
+            © 2025 Dashboard
+        </div>
+    </div>
+
+    <!-- ══════════ MAIN CONTENT ══════════ -->
+    <div id="mainContent" class="p-2 p-md-3">
+
+        <!-- ── HEADER ── -->
+        <div class="glass rounded-3 p-3 mb-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <!-- Hamburger (mobile only) -->
+                <div class="d-flex align-items-center gap-3">
+                    <button class="btn btn-link text-white p-0 d-md-none" onclick="openSidebar()" aria-label="Menu">
+                        <i class="bi bi-list fs-2"></i>
+                    </button>
+                    <div class="lh-1">
+                        <h5 class="mb-0 fw-semibold">Bonjour, Adminou Sani</h5>
+                        <small class="text-white-75">
+                            <i class="bi bi-house-fill"></i> &gt; Tableau de bord
+                        </small>
+                    </div>
+                </div>
+                <!-- Icons -->
+                <div class="d-flex align-items-center gap-3">
+                    <i class="bi bi-gear fs-5 opacity-75" role="button" style="cursor:pointer"></i>
+                    <div class="position-relative">
+                        <i class="bi bi-bell fs-5 opacity-75" role="button" style="cursor:pointer"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle"></span>
+                    </div>
+                    <i class="bi bi-person fs-5 opacity-75" role="button" style="cursor:pointer"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── BODY ── -->
+        <div id="scrollArea">
+            <div class="row g-3">
+
+                <!-- ── MAP COLUMN ── -->
+                <div class="col-12 col-lg-5">
+                    <h5 class="fw-semibold mb-2">Statistique Nationale</h5>
+                    <div class="glass rounded-3 p-3 text-center">
+                        <div class="map-placeholder mb-3">
+                            <div class="text-center text-white-50">
+                                <!-- Replace with real map image -->
+                                <i class="bi bi-map fs-1 mb-2 d-block"></i>
+                                <img src="Images/niger_map.png" alt="Carte Niger"
+                                     class="img-fluid rounded"
+                                     onerror="this.style.display='none'">
+                                <p class="mt-2 small">Faites glisser la souris au-dessus de la carte pour voir les statistiques</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ── STATS / CARDS COLUMN ── -->
+                <div class="col-12 col-lg-7">
+                    <div class="row g-3">
+
+                        <!-- Statistique Utilisateurs -->
+                        <div class="col-12 col-sm-6">
+                            <div class="glass rounded-3 p-3 text-center h-100">
+                                <h6 class="fw-semibold mb-3">Statistique Utilisateurs</h6>
+                                <img src="Images/Doughnut.png" alt="Donut chart"
+                                     class="img-fluid mb-3"
+                                     style="max-height:130px;"
+                                     onerror="this.outerHTML='<div class=\'d-flex justify-content-center mb-3\'><svg width=\'120\' height=\'120\' viewBox=\'0 0 42 42\'><circle cx=\'21\' cy=\'21\' r=\'15.91549431\' fill=\'transparent\' stroke=\'#B63817\' stroke-width=\'6\' stroke-dasharray=\'35 65\' stroke-dashoffset=\'25\'></circle><circle cx=\'21\' cy=\'21\' r=\'15.91549431\' fill=\'transparent\' stroke=\'#EA6A47\' stroke-width=\'6\' stroke-dasharray=\'40 60\' stroke-dashoffset=\'90\'></circle><circle cx=\'21\' cy=\'21\' r=\'15.91549431\' fill=\'transparent\' stroke=\'#EEEEEE\' stroke-width=\'6\' stroke-dasharray=\'25 75\' stroke-dashoffset=\'50\'></circle></svg></div>'">
+                                <div class="d-flex flex-column gap-2 align-items-start text-start ps-2">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <span class="legend-dot" style="background:#B63817;"></span>
+                                        <small>Utilisateurs inactifs</small>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <span class="legend-dot" style="background:#EA6A47;"></span>
+                                        <small>Utilisateurs actifs</small>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <span class="legend-dot" style="background:#EEEEEE;"></span>
+                                        <small>Tâches terminées</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Statistique des tâches -->
+                        <div class="col-12 col-sm-6">
+                            <div class="glass rounded-3 p-3 text-center h-100">
+                                <h6 class="fw-semibold mb-3">Statistique des tâches</h6>
+                                <img src="Images/Doughnut.png" alt="Donut chart"
+                                     class="img-fluid mb-3"
+                                     style="max-height:130px;"
+                                     onerror="this.outerHTML='<div class=\'d-flex justify-content-center mb-3\'><svg width=\'120\' height=\'120\' viewBox=\'0 0 42 42\'><circle cx=\'21\' cy=\'21\' r=\'15.91549431\' fill=\'transparent\' stroke=\'#B63817\' stroke-width=\'6\' stroke-dasharray=\'35 65\' stroke-dashoffset=\'25\'></circle><circle cx=\'21\' cy=\'21\' r=\'15.91549431\' fill=\'transparent\' stroke=\'#EA6A47\' stroke-width=\'6\' stroke-dasharray=\'40 60\' stroke-dashoffset=\'90\'></circle><circle cx=\'21\' cy=\'21\' r=\'15.91549431\' fill=\'transparent\' stroke=\'#EEEEEE\' stroke-width=\'6\' stroke-dasharray=\'25 75\' stroke-dashoffset=\'50\'></circle></svg></div>'">
+                                <div class="d-flex flex-column gap-2 align-items-start text-start ps-2">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <span class="legend-dot" style="background:#B63817;"></span>
+                                        <small>Tâches en attente</small>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <span class="legend-dot" style="background:#EA6A47;"></span>
+                                        <small>Tâches en cours</small>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <span class="legend-dot" style="background:#EEEEEE;"></span>
+                                        <small>Tâches terminées</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Dernières notifications -->
+                        <div class="col-12 col-sm-6">
+                            <div class="glass rounded-3 p-3 h-100">
+                                <h6 class="fw-semibold text-center mb-3">
+                                    <i class="bi bi-bell me-1"></i>Dernière notification
+                                </h6>
+                                <div class="notif-item">Lorem ipsum dolor sit amet...</div>
+                                <div class="notif-item alt">Nouvelle tâche assignée à vous.</div>
+                                <div class="notif-item">Rapport mensuel disponible.</div>
+                                <div class="notif-item alt">Mise à jour système effectuée.</div>
+                            </div>
+                        </div>
+
+                        <!-- Derniers messages -->
+                        <div class="col-12 col-sm-6">
+                            <div class="glass rounded-3 p-3 h-100">
+                                <h6 class="fw-semibold text-center mb-3">
+                                    <i class="bi bi-chat-dots me-1"></i>Dernier message
+                                </h6>
+                                <div class="notif-item">Bonjour, votre rapport est prêt.</div>
+                                <div class="notif-item alt">Réunion prévue demain à 10h.</div>
+                                <div class="notif-item">Merci pour votre retour rapide.</div>
+                                <div class="notif-item alt">Le serveur est maintenant actif.</div>
+                            </div>
+                        </div>
+
+                    </div><!-- /row -->
+                </div><!-- /col -->
+
+            </div><!-- /row -->
+        </div><!-- /scrollArea -->
+
+    </div><!-- /mainContent -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+</html>
