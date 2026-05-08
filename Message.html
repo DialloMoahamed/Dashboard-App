@@ -19,20 +19,26 @@
     <div class="bg bg4"></div>
 
     <!-- Sidebar -->
-    <div class="card h-100 position-fixed top-0 start-0 border-1 border-white d-md-block d-none"
+    <div class="card h-100 position-fixed top-0 start-0 border-1 border-white"
         style="width: 320px; background-color: #818181ae;">
         <div class="card-body">
             <div class="mt-2">
                 <img src="Images/Logo (1).svg" class="w-100" alt="">
             </div>
             <ul class="list-unstyled mt-5">
-                <li class="fs-4 mb-4 liste"><a href="Dashboard.html" class="text-white text-decoration-none">Dashboard ></a></li>
-                <li class="fs-4 mb-4 liste"><a href="Utilisateurs.html" class="text-white text-decoration-none">Utilisateurs
+                <li class="fs-4 mb-4 liste"><a href="index.html" class="text-white text-decoration-none">Dashboard ></a>
+                </li>
+                <li class="fs-4 mb-4 liste"><a href="Utilisateurs.html"
+                        class="text-white text-decoration-none">Utilisateurs
                         ></a></li>
-                <li class="fs-4 mb-4 liste"><a href="Message.html" class="text-white text-decoration-none">Messagerie ></a></li>
-                <li class="fs-4 mb-4 liste"><a href="Taches.html" class="text-white text-decoration-none">Tâches ></a></li>
-                <li class="fs-4 mb-4 liste"><a href="Calendrier.html" class="text-white text-decoration-none">Calendrier ></a></li>
-                <li class="fs-4 mb-4 liste"><a href="Compte.html" class="text-white text-decoration-none">Compte ></a></li>
+                <li class="fs-4 mb-4 liste active"><a href="Message.html" class="text-white text-decoration-none">Messagerie
+                        ></a></li>
+                <li class="fs-4 mb-4 liste"><a href="Taches.html" class="text-white text-decoration-none">Tâches ></a>
+                </li>
+                <li class="fs-4 mb-4 liste"><a href="Calendrier.html" class="text-white text-decoration-none">Calendrier
+                        ></a></li>
+                <li class="fs-4 mb-4 liste"><a href="Compte.html" class="text-white text-decoration-none">Compte ></a>
+                </li>
             </ul>
         </div>
     </div>
@@ -44,7 +50,7 @@
             <div class="d-flex justify-content-between">
                 <div class="lh-1">
                     <h4>Bonjour, Adminou Sani</h4>
-                    <span><i class="bi bi-house-fill fs-5"></i> > Tableau de board</span>
+                    <span><i class="bi bi-house-fill fs-5"></i> > Messagerie</span>
                 </div>
                 <div class="d-flex justify-content-end align-items-center gap-3">
                     <i class="bi bi-gear fs-4"></i>
@@ -63,96 +69,268 @@
         style="margin-left: 330px !important; background-color: transparent">
         <div class="card-body">
             <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"
-                data-bs-smooth-scroll="true" class="scrollspy-example p-3 rounded-2 d-flex justify-content-between gap-4"
-                tabindex="0" style="overflow-y: auto; height: 86vh;" data-bs-spy="scroll"
-                data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true"
-                class="scrollspy-example p-3 rounded-2" tabindex="0">
-                <div class="w-50">
-                    <h4>Statistique Nationale</h4>
-                    <div class="card d-flex justify-content-center align-items-center text-white border-white"
-                        style="background-color: #818181ae;">
-                        <div class="card-body">
-                            <img class="w-100" src="Images/niger_map.png" alt="">
-                            <p class="mt-5">Faite glisser la souris au dessus de la carte pour voir les statistiques</p>
+                data-bs-smooth-scroll="true" class="scrollspy-example p-3 rounded-2" tabindex="0"
+                style="overflow-y: auto; height: 86vh;" data-bs-spy="scroll" data-bs-target="#navbar-example2"
+                data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example p-3 rounded-2"
+                tabindex="0">
+
+                <div class="card border-1 border-white text-white w-100" style="background-color: #818181ae;">
+
+                    <div class="card-body">
+
+                        <!-- NAVIGATION -->
+                        <div
+                            class="d-flex justify-content-between align-items-center gap-3 flex-wrap nav nav-pills mb-4">
+
+                            <!-- Réception -->
+                            <button class="nav-card active" data-bs-toggle="pill" data-bs-target="#reception">
+
+                                <div class="card border-0 text-white">
+                                    <div class="card-body text-center">
+                                        <span class="d-flex justify-content-center align-items-center gap-2">
+                                            <i class="bi bi-envelope fs-2"></i>
+                                            Réception
+                                        </span>
+                                    </div>
+                                </div>
+
+                            </button>
+
+                            <!-- Envoi -->
+                            <button class="nav-card" data-bs-toggle="pill" data-bs-target="#envoi">
+
+                                <div class="card border-0 text-white">
+                                    <div class="card-body text-center">
+                                        <span class="d-flex justify-content-center align-items-center gap-2">
+                                            <i class="bi bi-send fs-2"></i>
+                                            Envoi
+                                        </span>
+                                    </div>
+                                </div>
+
+                            </button>
+
+                            <!-- Brouillon -->
+                            <button class="nav-card" data-bs-toggle="pill" data-bs-target="#brouillon">
+
+                                <div class="card border-0 text-white">
+                                    <div class="card-body text-center">
+                                        <span class="d-flex justify-content-center align-items-center gap-2">
+                                            <i class="bi bi-file-earmark-text fs-2"></i>
+                                            Brouillon
+                                        </span>
+                                    </div>
+                                </div>
+
+                            </button>
+
+                            <!-- Epinglés -->
+                            <button class="nav-card" data-bs-toggle="pill" data-bs-target="#epingle">
+
+                                <div class="card border-0 text-white">
+                                    <div class="card-body text-center">
+                                        <span class="d-flex justify-content-center align-items-center gap-2">
+                                            <i class="bi bi-file-earmark-text fs-2"></i>
+                                            Epinglés
+                                        </span>
+                                    </div>
+                                </div>
+
+                            </button>
+
+                            <!-- Spam -->
+                            <button class="nav-card" data-bs-toggle="pill" data-bs-target="#spam">
+
+                                <div class="card border-0 text-white">
+                                    <div class="card-body text-center">
+                                        <span class="d-flex justify-content-center align-items-center gap-2">
+                                            <i class="bi bi-file-earmark-text fs-2"></i>
+                                            Spam
+                                        </span>
+                                    </div>
+                                </div>
+
+                            </button>
+                            <!-- Corbeille -->
+                            <button class="nav-card" data-bs-toggle="pill" data-bs-target="#corbeille">
+
+                                <div class="card border-0 text-white">
+                                    <div class="card-body text-center">
+                                        <span class="d-flex justify-content-center align-items-center gap-2">
+                                            <i class="bi bi-file-earmark-text fs-2"></i>
+                                            Corbeille
+                                        </span>
+                                    </div>
+                                </div>
+
+                            </button>
+
                         </div>
                     </div>
                 </div>
-                <div class="w-50">
-                    <div class="row row-cols-1 row-cols-md-2 g-4">
-                        <div class="col">
-                            <div class="card">
-                                <div class="card-body text-center text-white border-1" style="background-color: #818181ae;">
-                                    <h5 class="card-title">Statistique Utilisateurs</h5>
-                                    <img class="w-50" src="Images/Doughnut.png" alt="">
-                                    <div class="d-flex gap-3 justify-content-center align-items-center mt-3">
-                                        <span style="width: 40px; height: 18px; background-color: #B63817;"
-                                            class="d-flex justify-content-center align-items-center fs-4 "></span>
-                                        <span>Utilisateurs inactif</span>
-                                    </div>
-                                    <div class="d-flex gap-3 justify-content-center align-items-center mt-3">
-                                        <span style="width: 40px; height: 18px; background-color: #EA6A47;"
-                                            class="d-flex justify-content-center align-items-center fs-4 "></span>
-                                        <span>Utilisateurs actif</span>
-                                    </div>
-                                    <div class="d-flex gap-3 justify-content-center align-items-center mt-3">
-                                        <span style="width: 40px; height: 18px; background-color: #EEEEEE;"
-                                            class="d-flex justify-content-center align-items-center fs-4 "></span>
-                                        <span>Tâches terminées</span>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="card mb-4 border-0" style="background-color: transparent;">
+                    <div class="card-body d-flex justify-content-between text-white align-items-center">
+                        <div class="d-flex gap-4">
+                            <input style="transform: scale(1.9);" type="checkbox" id="">
+                            <i class="bi bi-trash fs-3" role="button"></i>
+                            <i class="bi bi-envelope-open fs-3" role="button"></i>
+                            <i class="bi bi-folder2 fs-3" role="button"></i>
+                            <i class="bi bi-tag fs-3" role="button"></i>
                         </div>
-                        <div class="col">
-                            <div class="card">
-                                <div class="card-body text-center text-white border-1" style="background-color: #818181ae;">
-                                    <h5 class="card-title">Statistique des tâchess</h5>
-                                    <img class="w-50" src="Images/Doughnut.png" alt="">
-                                    <div class="d-flex gap-3 justify-content-center align-items-center mt-3">
-                                        <span style="width: 40px; height: 18px; background-color: #B63817;"
-                                            class="d-flex justify-content-center align-items-center fs-4 "></span>
-                                        <span>Tâches en attente</span>
-                                    </div>
-                                    <div class="d-flex gap-3 justify-content-center align-items-center mt-3">
-                                        <span style="width: 40px; height: 18px; background-color: #EA6A47;"
-                                            class="d-flex justify-content-center align-items-center fs-4 "></span>
-                                        <span>Tâches en cours</span>
-                                    </div>
-                                    <div class="d-flex gap-3 justify-content-center align-items-center mt-3">
-                                        <span style="width: 40px; height: 18px; background-color: #EEEEEE;"
-                                            class="d-flex justify-content-center align-items-center fs-4 "></span>
-                                        <span>Tâches terminées</span>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="d-flex gap-4">
+                            <i class="bi bi-arrow-clockwise fs-3" role="button"></i>
+                            <i class="bi bi-three-dots-vertical fs-3" role="button"></i>
                         </div>
-                        <div class="col">
-                            <div class="card">
-                                <div class="card-body text-white border-1" style="background-color: #818181ae;">
-                                    <h5 class="card-title text-center">Dernière notification</h5>
-                                    <div>
-                                        <p class="mt-3 p-2 rounded" style="background-color: #d3d0d0;">Lorem ipsum ...</p>
-                                        <p class="mt-3 p-2 ">Lorem ipsum ...</p>
-                                        <p class="mt-3 p-2 rounded" style="background-color: #d3d0d0;">Lorem ipsum ...</p>
-                                        <p class="mt-3 p-2">Lorem ipsum ...</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <div class="card-body text-white border-1" style="background-color: #818181ae;">
-                                    <h5 class="card-title text-center">Dernier message</h5>
-                                    <div>
-                                        <p class="mt-3 p-2 rounded" style="background-color: #d3d0d0;">Lorem ipsum ...</p>
-                                        <p class="mt-3 p-2 ">Lorem ipsum ...</p>
-                                        <p class="mt-3 p-2 rounded" style="background-color: #d3d0d0;">Lorem ipsum ...</p>
-                                        <p class="mt-3 p-2">Lorem ipsum ...</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
                     </div>
+                </div>
+                <!-- CONTENU -->
+                <div class="tab-content" style="box-shadow: -2px 23px 22px 2px rgba(0, 0, 0, 0.31);">
+
+                    <!-- Réception -->
+                    <div class="tab-pane fade show active" id="reception">
+
+                        <div class="card border-white text-white mb-3" style="background-color: #5f5f5fae;">
+
+                            <div class="card-body d-flex justify-content-between align-items-center">
+                                <div class="d-flex gap-3">
+                                    <input style="transform: scale(1.9);" type="checkbox" id="">
+                                    <i class="bi bi-pin-angle fs-4" role="button"></i>
+                                </div>
+                                <div>
+                                    <span class="rounded-circle bg-white fs-5"
+                                        style="color: #FF6C33; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">ZT</span>
+                                </div>
+                                <div>
+                                    <h5>Zibo Tonko</h5>
+                                </div>
+                                <div>
+                                    <span>Repport du cas du client N°123</span>
+                                </div>
+                                <div>
+                                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                                </div>
+                                <div>
+                                    <span>08:23 Am</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="card border-white text-white" style="background-color: #5f5f5fae;">
+
+                            <div class="card-body d-flex justify-content-between align-items-center">
+                                <div class="d-flex gap-3">
+                                    <input style="transform: scale(1.9);" type="checkbox" id="">
+                                    <i class="bi bi-pin-angle fs-4" role="button"></i>
+                                </div>
+                                <div>
+                                    <span class="rounded-circle bg-white fs-5"
+                                        style="color: #FF6C33; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">DD</span>
+                                </div>
+                                <div>
+                                    <h5>Danladi Dantani</h5>
+                                </div>
+                                <div>
+                                    <span>Repport du cas du client N°123</span>
+                                </div>
+                                <div>
+                                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                                </div>
+                                <div>
+                                    <span>08:23 Am</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Envoi -->
+                    <div class="tab-pane fade" id="envoi">
+
+                         <div class="card border-white text-white mb-3" style="background-color: #5f5f5fae;">
+
+                            <div class="card-body d-flex justify-content-between align-items-center">
+                                <div class="d-flex gap-3">
+                                    <input style="transform: scale(1.9);" type="checkbox" id="">
+                                    <i class="bi bi-pin-angle fs-4" role="button"></i>
+                                </div>
+                                <div>
+                                    <span class="rounded-circle bg-white fs-5"
+                                        style="color: #FF6C33; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">ZT</span>
+                                </div>
+                                <div>
+                                    <h5>Zibo Tonko</h5>
+                                </div>
+                                <div>
+                                    <span>Repport du cas du client N°123</span>
+                                </div>
+                                <div>
+                                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                                </div>
+                                <div>
+                                    <span>08:23 Am</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Brouillon -->
+                    <div class="tab-pane fade" id="brouillon">
+
+                        <div class="card border-white text-white" style="background-color: #5f5f5fae;">
+
+                            <div class="card-body">
+                                <h3>Brouillons</h3>
+                                <p>Voici les brouillons sauvegardés.</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Epinglés -->
+                    <div class="tab-pane fade" id="epingle">
+
+                        <div class="card border-white text-white" style="background-color: #5f5f5fae;">
+
+                            <div class="card-body">
+                                <h3>Epinglés</h3>
+                                <p>Voici les messages épinglés.</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Spam -->
+                    <div class="tab-pane fade" id="spam">
+
+                        <div class="card border-white text-white" style="background-color: #5f5f5fae;">
+
+                            <div class="card-body">
+                                <h3>Spam</h3>
+                                <p>Voici les messages spam.</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!-- Corbeille -->
+                    <div class="tab-pane fade" id="corbeille">
+
+                        <div class="card border-white text-white" style="background-color: #5f5f5fae;">
+
+                            <div class="card-body">
+                                <h3>Corbeille</h3>
+                                <p>Voici les messages dans la corbeille.</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
         </div>
