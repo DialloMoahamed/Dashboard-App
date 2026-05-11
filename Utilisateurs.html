@@ -20,7 +20,7 @@
         <div class="bg bg4"></div>
 
         <!-- Sidebar -->
-        <div class="card h-100 position-fixed top-0 start-0 border-1 border-white"
+        <div class="card h-100 position-fixed top-0 start-0 border-0"
                 style="width: 320px; background-color: #818181ae;">
                 <div class="card-body">
                         <div class="mt-2">
@@ -50,7 +50,7 @@
         </div>
 
         <!-- Header -->
-        <div class="card border-1 border-white text-white mt-0"
+        <div class="card border-0 text-white mt-0"
                 style="margin-left: 330px !important; background-color: #818181ae;">
                 <div class="card-body">
                         <div class="d-flex justify-content-between">
@@ -71,7 +71,7 @@
                 </div>
         </div>
 
-        <div class="card border-1 border-white text-white mt-3"
+        <div class="card border-1 border-0 text-white mt-3"
                 style="margin-left: 330px !important; background-color: #818181ae;">
                 <div class="card-body">
                         <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"
@@ -101,654 +101,834 @@
                                                         <input type="search"
                                                                 class="border-1 border rounded text-white custom-search"
                                                                 style="background-color: #818181ae;"
-                                                                placeholder="Rechercher un Utilisateurs"> 
-                                                                <button type="submit" style="background-color: #929090ae !important; font-size: small;" class="border-0 text-white p-2 rounded"><i class="bi bi-arrow-up"></i> Exporter</button>
-                                                                <button type="submit" style="background-color: #f9632c !important; font-size: small;" class="border-0 text-white p-2 rounded">+ Ajouter un nouvel Utilisateurs</button>
+                                                                placeholder="Rechercher un Utilisateurs">
+                                                        <button type="submit"
+                                                                style="background-color: #929090ae !important; font-size: small;"
+                                                                class="border-0 text-white p-2 rounded"><i
+                                                                        class="bi bi-arrow-up"></i> Exporter</button>
+                                                        <button type="submit"
+                                                                style="background-color: #f9632c !important; font-size: small;"
+                                                                class="border-0 text-white p-2 rounded">+ Ajouter un
+                                                                nouvel Utilisateurs</button>
                                                 </div>
                                         </form>
-                                        <table class="table align-middle" style="overflow-x: scroll !important;">
-                                                <thead>
-                                                        <tr>
-                                                                <th scope="col"><input style="transform: scale(1.9);"
-                                                                                type="checkbox" id=""></th>
-                                                                <th scope="col" class="text-white">Utilisateurs</th>
-                                                                <th scope="col" class="text-white"></th>
-                                                                <th scope="col" class="text-white"></th>
-                                                                <th scope="col" class="text-white">Role</th>
-                                                                <th scope="col" class="text-white"></th>
-                                                                <th scope="col" class="text-white"></th>
-                                                                <th scope="col" class="text-white">Status</th>
-                                                                <th scope="col" class="text-white">Actions</th>
-                                                        </tr>
-                                                </thead>
+                                        <div class="card border-0 text-white mb-2"
+                                                style="background-color: transparent;">
 
-                                                <tbody>
-                                                        <tr>
-                                                                <th scope="row"><input
-                                                                                style="transform: scale(1.9); background-color: transparent !important;"
-                                                                                type="checkbox" id=""></th>
-                                                                <td class="d-flex align-items-center gap-3">
-                                                                        <div>
-                                                                                <span class="rounded-circle bg-white fs-5"
-                                                                                        style="color: #FF6C33; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">AS</span>
+                                                <div class="card-body">
+
+                                                        <div class="row align-items-center text-center fw-bold">
+
+                                                                <div class="col-1 text-start">
+                                                                        <input style="transform: scale(1.5);"
+                                                                                type="checkbox">
+                                                                </div>
+
+                                                                <div class="col-4 text-start">
+                                                                        Utilisateur
+                                                                </div>
+
+                                                                <div class="col-2">
+                                                                        Rôle
+                                                                </div>
+
+                                                                <div class="col-2">
+                                                                        Status
+                                                                </div>
+
+                                                                <div class="col-3">
+                                                                        Actions
+                                                                </div>
+
+                                                        </div>
+
+                                                </div>
+
+                                        </div>
+
+                                        <hr class="border-white opacity-50">
+
+                                        <div class="card border-0 text-white mb-3 rounded"
+                                                style="background-color: rgba(255,255,255,0.18);">
+
+                                                <div class="card-body py-4">
+
+                                                        <div class="row align-items-center text-center">
+
+                                                                <div class="col-1 text-start">
+                                                                        <input style="transform: scale(1.5);"
+                                                                                type="checkbox">
+                                                                </div>
+
+                                                                <div class="col-4">
+
+                                                                        <div class="d-flex align-items-center gap-3">
+
+                                                                                <span class="rounded-circle bg-white fw-bold d-flex align-items-center justify-content-center"
+                                                                                        style="color: #FF6C33; width: 55px; height: 55px; font-size: 22px;">
+                                                                                        AS
+                                                                                </span>
+
+                                                                                <div class="text-start">
+
+                                                                                        <span
+                                                                                                class="fw-bold d-block fs-5">
+                                                                                                Adminou Sani
+                                                                                        </span>
+
+                                                                                        <span
+                                                                                                style="font-size: 14px; color: #e2e2e2;">
+                                                                                                adminou.sani@example.com
+                                                                                        </span>
+
+                                                                                </div>
+
                                                                         </div>
-                                                                        <div class="lh-1 text-white">
-                                                                                <h6>Adminou Sani</h6>
-                                                                                <span>Adminou@mail.com</span>
+
+                                                                </div>
+
+                                                                <div class="col-2 fw-semibold">
+                                                                        Administrateur
+                                                                </div>
+
+                                                                <div class="col-2">
+                                                                        <span class="fw-bold text-light">
+                                                                                inactive
+                                                                        </span>
+                                                                </div>
+
+                                                                <div class="col-3">
+
+                                                                        <div
+                                                                                class="d-flex justify-content-center gap-4 fs-4">
+
+                                                                                <i class="bi bi-pen"></i>
+
+                                                                                <i
+                                                                                        class="bi bi-trash cursor-pointer"></i>
+
+                                                                                <i
+                                                                                        class="bi bi-three-dots-vertical cursor-pointer"></i>
+
                                                                         </div>
-                                                                </td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">Administrateur</td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">inactive</td>
-                                                                <td class="gap-3 text-white" role="button"><i
-                                                                                class="bi bi-pen fs-4"></i><i
-                                                                                class="bi bi-trash3 fs-4"></i><i
-                                                                                class="bi bi-three-dots-vertical fs-4"></i>
-                                                                </td>
-                                                        </tr>
-                                                        <tr>
-                                                                <th scope="row"><input
-                                                                                style="transform: scale(1.9); background-color: transparent !important;"
-                                                                                type="checkbox" id=""></th>
-                                                                <td class="d-flex align-items-center gap-3">
-                                                                        <div>
-                                                                                <span class="rounded-circle bg-white p-2 fs-5"
-                                                                                        style="color: #FF6C33; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">AI</span>
+
+                                                                </div>
+
+                                                        </div>
+
+                                                </div>
+
+                                        </div>
+                                        <div class="card border-0 text-white mb-3 rounded"
+                                                style="background-color: rgba(255,255,255,0.18);">
+
+                                                <div class="card-body py-4">
+
+                                                        <div class="row align-items-center text-center">
+
+                                                                <div class="col-1 text-start">
+                                                                        <input style="transform: scale(1.5);"
+                                                                                type="checkbox">
+                                                                </div>
+
+                                                                <div class="col-4">
+
+                                                                        <div class="d-flex align-items-center gap-3">
+
+                                                                                <span class="rounded-circle bg-white fw-bold d-flex align-items-center justify-content-center"
+                                                                                        style="color: #FF6C33; width: 55px; height: 55px; font-size: 22px;">
+                                                                                        AS
+                                                                                </span>
+
+                                                                                <div class="text-start">
+
+                                                                                        <span
+                                                                                                class="fw-bold d-block fs-5">
+                                                                                                Adminou Sani
+                                                                                        </span>
+
+                                                                                        <span
+                                                                                                style="font-size: 14px; color: #e2e2e2;">
+                                                                                                adminou.sani@example.com
+                                                                                        </span>
+
+                                                                                </div>
+
                                                                         </div>
-                                                                        <div class="lh-1 text-white">
-                                                                                <h6>Analysatou idi</h6>
-                                                                                <span>Analysatou@mail.com</span>
+
+                                                                </div>
+
+                                                                <div class="col-2 fw-semibold">
+                                                                        Administrateur
+                                                                </div>
+
+                                                                <div class="col-2">
+                                                                        <span class="fw-bold text-light">
+                                                                                inactive
+                                                                        </span>
+                                                                </div>
+
+                                                                <div class="col-3">
+
+                                                                        <div
+                                                                                class="d-flex justify-content-center gap-4 fs-4">
+
+                                                                                <i class="bi bi-pen"></i>
+
+                                                                                <i
+                                                                                        class="bi bi-trash cursor-pointer"></i>
+
+                                                                                <i
+                                                                                        class="bi bi-three-dots-vertical cursor-pointer"></i>
+
                                                                         </div>
-                                                                </td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">Marketeurs</td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">inactive</td>
-                                                                <td class="gap-3 text-white" role="button"><i
-                                                                                class="bi bi-pen fs-4"></i><i
-                                                                                class="bi bi-trash3 fs-4"></i><i
-                                                                                class="bi bi-three-dots-vertical fs-4"></i>
-                                                                </td>
-                                                        </tr>
-                                                        <tr>
-                                                                <th scope="row"><input
-                                                                                style="transform: scale(1.9); background-color: transparent !important;"
-                                                                                type="checkbox" id=""></th>
-                                                                <td class="d-flex align-items-center gap-3">
-                                                                        <div>
-                                                                                <span class="rounded-circle bg-white p-2 fs-5"
-                                                                                        style="color: #FF6C33; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">BT</span>
+
+                                                                </div>
+
+                                                        </div>
+
+                                                </div>
+
+                                        </div>
+                                        <div class="card border-0 text-white mb-3 rounded"
+                                                style="background-color: rgba(255,255,255,0.18);">
+
+                                                <div class="card-body py-4">
+
+                                                        <div class="row align-items-center text-center">
+
+                                                                <div class="col-1 text-start">
+                                                                        <input style="transform: scale(1.5);"
+                                                                                type="checkbox">
+                                                                </div>
+
+                                                                <div class="col-4">
+
+                                                                        <div class="d-flex align-items-center gap-3">
+
+                                                                                <span class="rounded-circle bg-white fw-bold d-flex align-items-center justify-content-center"
+                                                                                        style="color: #FF6C33; width: 55px; height: 55px; font-size: 22px;">
+                                                                                        AS
+                                                                                </span>
+
+                                                                                <div class="text-start">
+
+                                                                                        <span
+                                                                                                class="fw-bold d-block fs-5">
+                                                                                                Adminou Sani
+                                                                                        </span>
+
+                                                                                        <span
+                                                                                                style="font-size: 14px; color: #e2e2e2;">
+                                                                                                adminou.sani@example.com
+                                                                                        </span>
+
+                                                                                </div>
+
                                                                         </div>
-                                                                        <div class="lh-1 text-white">
-                                                                                <h6>Bako Tondi</h6>
-                                                                                <span>Bako@mail.com</span>
+
+                                                                </div>
+
+                                                                <div class="col-2 fw-semibold">
+                                                                        Administrateur
+                                                                </div>
+
+                                                                <div class="col-2">
+                                                                        <span class="fw-bold text-light">
+                                                                                inactive
+                                                                        </span>
+                                                                </div>
+
+                                                                <div class="col-3">
+
+                                                                        <div
+                                                                                class="d-flex justify-content-center gap-4 fs-4">
+
+                                                                                <i class="bi bi-pen"></i>
+
+                                                                                <i
+                                                                                        class="bi bi-trash cursor-pointer"></i>
+
+                                                                                <i
+                                                                                        class="bi bi-three-dots-vertical cursor-pointer"></i>
+
                                                                         </div>
-                                                                </td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">Controleur</td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">active</td>
-                                                                <td class="gap-3 text-white" role="button"><i
-                                                                                class="bi bi-pen fs-4"></i><i
-                                                                                class="bi bi-trash3 fs-4"></i><i
-                                                                                class="bi bi-three-dots-vertical fs-4"></i>
-                                                                </td>
-                                                        </tr>
-                                                        <tr>
-                                                                <th scope="row"><input
-                                                                                style="transform: scale(1.9); background-color: transparent !important;"
-                                                                                type="checkbox" id=""></th>
-                                                                <td class="d-flex align-items-center gap-3">
-                                                                        <div>
-                                                                                <span class="rounded-circle bg-white p-2 fs-5"
-                                                                                        style="color: #FF6C33; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">TT</span>
+
+                                                                </div>
+
+                                                        </div>
+
+                                                </div>
+
+                                        </div>
+                                        <div class="card border-0 text-white mb-3 rounded"
+                                                style="background-color: rgba(255,255,255,0.18);">
+
+                                                <div class="card-body py-4">
+
+                                                        <div class="row align-items-center text-center">
+
+                                                                <div class="col-1 text-start">
+                                                                        <input style="transform: scale(1.5);"
+                                                                                type="checkbox">
+                                                                </div>
+
+                                                                <div class="col-4">
+
+                                                                        <div class="d-flex align-items-center gap-3">
+
+                                                                                <span class="rounded-circle bg-white fw-bold d-flex align-items-center justify-content-center"
+                                                                                        style="color: #FF6C33; width: 55px; height: 55px; font-size: 22px;">
+                                                                                        AS
+                                                                                </span>
+
+                                                                                <div class="text-start">
+
+                                                                                        <span
+                                                                                                class="fw-bold d-block fs-5">
+                                                                                                Adminou Sani
+                                                                                        </span>
+
+                                                                                        <span
+                                                                                                style="font-size: 14px; color: #e2e2e2;">
+                                                                                                adminou.sani@example.com
+                                                                                        </span>
+
+                                                                                </div>
+
                                                                         </div>
-                                                                        <div class="lh-1 text-white">
-                                                                                <h6>Tchanga Tonko</h6>
-                                                                                <span>Tchanga@mail.com</span>
+
+                                                                </div>
+
+                                                                <div class="col-2 fw-semibold">
+                                                                        Administrateur
+                                                                </div>
+
+                                                                <div class="col-2">
+                                                                        <span class="fw-bold text-light">
+                                                                                inactive
+                                                                        </span>
+                                                                </div>
+
+                                                                <div class="col-3">
+
+                                                                        <div
+                                                                                class="d-flex justify-content-center gap-4 fs-4">
+
+                                                                                <i class="bi bi-pen"></i>
+
+                                                                                <i
+                                                                                        class="bi bi-trash cursor-pointer"></i>
+
+                                                                                <i
+                                                                                        class="bi bi-three-dots-vertical cursor-pointer"></i>
+
                                                                         </div>
-                                                                </td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">Administrateur</td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">inactive</td>
-                                                                <td class="gap-3 text-white" role="button"><i
-                                                                                class="bi bi-pen fs-4"></i><i
-                                                                                class="bi bi-trash3 fs-4"></i><i
-                                                                                class="bi bi-three-dots-vertical fs-4"></i>
-                                                                </td>
-                                                        </tr>
-                                                        <tr>
-                                                                <th scope="row"><input
-                                                                                style="transform: scale(1.9); background-color: transparent !important;"
-                                                                                type="checkbox" id=""></th>
-                                                                <td class="d-flex align-items-center gap-3">
-                                                                        <div>
-                                                                                <span class="rounded-circle bg-white p-2 fs-5"
-                                                                                        style="color: #FF6C33; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">GS</span>
+
+                                                                </div>
+
+                                                        </div>
+
+                                                </div>
+
+                                        </div>
+                                        <div class="card border-0 text-white mb-3 rounded"
+                                                style="background-color: rgba(255,255,255,0.18);">
+
+                                                <div class="card-body py-4">
+
+                                                        <div class="row align-items-center text-center">
+
+                                                                <div class="col-1 text-start">
+                                                                        <input style="transform: scale(1.5);"
+                                                                                type="checkbox">
+                                                                </div>
+
+                                                                <div class="col-4">
+
+                                                                        <div class="d-flex align-items-center gap-3">
+
+                                                                                <span class="rounded-circle bg-white fw-bold d-flex align-items-center justify-content-center"
+                                                                                        style="color: #FF6C33; width: 55px; height: 55px; font-size: 22px;">
+                                                                                        AS
+                                                                                </span>
+
+                                                                                <div class="text-start">
+
+                                                                                        <span
+                                                                                                class="fw-bold d-block fs-5">
+                                                                                                Adminou Sani
+                                                                                        </span>
+
+                                                                                        <span
+                                                                                                style="font-size: 14px; color: #e2e2e2;">
+                                                                                                adminou.sani@example.com
+                                                                                        </span>
+
+                                                                                </div>
+
                                                                         </div>
-                                                                        <div class="lh-1 text-white">
-                                                                                <h6>Gambo Shehu</h6>
-                                                                                <span>Gambo@mail.com</span>
+
+                                                                </div>
+
+                                                                <div class="col-2 fw-semibold">
+                                                                        Administrateur
+                                                                </div>
+
+                                                                <div class="col-2">
+                                                                        <span class="fw-bold text-light">
+                                                                                inactive
+                                                                        </span>
+                                                                </div>
+
+                                                                <div class="col-3">
+
+                                                                        <div
+                                                                                class="d-flex justify-content-center gap-4 fs-4">
+
+                                                                                <i class="bi bi-pen"></i>
+
+                                                                                <i
+                                                                                        class="bi bi-trash cursor-pointer"></i>
+
+                                                                                <i
+                                                                                        class="bi bi-three-dots-vertical cursor-pointer"></i>
+
                                                                         </div>
-                                                                </td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">Administrateur</td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">inactive</td>
-                                                                <td class="gap-3 text-white" role="button"><i
-                                                                                class="bi bi-pen fs-4"></i><i
-                                                                                class="bi bi-trash3 fs-4"></i><i
-                                                                                class="bi bi-three-dots-vertical fs-4"></i>
-                                                                </td>
-                                                        </tr>
-                                                        <tr>
-                                                                <th scope="row"><input
-                                                                                style="transform: scale(1.9); background-color: transparent !important;"
-                                                                                type="checkbox" id=""></th>
-                                                                <td class="d-flex align-items-center gap-3">
-                                                                        <div>
-                                                                                <span class="rounded-circle bg-white p-2 fs-5"
-                                                                                        style="color: #FF6C33; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">TD</span>
+
+                                                                </div>
+
+                                                        </div>
+
+                                                </div>
+
+                                        </div>
+                                        <div class="card border-0 text-white mb-3 rounded"
+                                                style="background-color: rgba(255,255,255,0.18);">
+
+                                                <div class="card-body py-4">
+
+                                                        <div class="row align-items-center text-center">
+
+                                                                <div class="col-1 text-start">
+                                                                        <input style="transform: scale(1.5);"
+                                                                                type="checkbox">
+                                                                </div>
+
+                                                                <div class="col-4">
+
+                                                                        <div class="d-flex align-items-center gap-3">
+
+                                                                                <span class="rounded-circle bg-white fw-bold d-flex align-items-center justify-content-center"
+                                                                                        style="color: #FF6C33; width: 55px; height: 55px; font-size: 22px;">
+                                                                                        AS
+                                                                                </span>
+
+                                                                                <div class="text-start">
+
+                                                                                        <span
+                                                                                                class="fw-bold d-block fs-5">
+                                                                                                Adminou Sani
+                                                                                        </span>
+
+                                                                                        <span
+                                                                                                style="font-size: 14px; color: #e2e2e2;">
+                                                                                                adminou.sani@example.com
+                                                                                        </span>
+
+                                                                                </div>
+
                                                                         </div>
-                                                                        <div class="lh-1 text-white">
-                                                                                <h6>Tchanga Djibo</h6>
-                                                                                <span>Djibo@mail.com</span>
+
+                                                                </div>
+
+                                                                <div class="col-2 fw-semibold">
+                                                                        Administrateur
+                                                                </div>
+
+                                                                <div class="col-2">
+                                                                        <span class="fw-bold text-light">
+                                                                                inactive
+                                                                        </span>
+                                                                </div>
+
+                                                                <div class="col-3">
+
+                                                                        <div
+                                                                                class="d-flex justify-content-center gap-4 fs-4">
+
+                                                                                <i class="bi bi-pen"></i>
+
+                                                                                <i
+                                                                                        class="bi bi-trash cursor-pointer"></i>
+
+                                                                                <i
+                                                                                        class="bi bi-three-dots-vertical cursor-pointer"></i>
+
                                                                         </div>
-                                                                </td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">Administrateur</td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">inactive</td>
-                                                                <td class="gap-3 text-white" role="button"><i
-                                                                                class="bi bi-pen fs-4"></i><i
-                                                                                class="bi bi-trash3 fs-4"></i><i
-                                                                                class="bi bi-three-dots-vertical fs-4"></i>
-                                                                </td>
-                                                        </tr>
-                                                        <tr>
-                                                                <th scope="row"><input
-                                                                                style="transform: scale(1.9); background-color: transparent !important;"
-                                                                                type="checkbox" id=""></th>
-                                                                <td class="d-flex align-items-center gap-3">
-                                                                        <div>
-                                                                                <span class="rounded-circle bg-white fs-5"
-                                                                                        style="color: #FF6C33; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">AS</span>
+
+                                                                </div>
+
+                                                        </div>
+
+                                                </div>
+
+                                        </div>
+                                        <div class="card border-0 text-white mb-3 rounded"
+                                                style="background-color: rgba(255,255,255,0.18);">
+
+                                                <div class="card-body py-4">
+
+                                                        <div class="row align-items-center text-center">
+
+                                                                <div class="col-1 text-start">
+                                                                        <input style="transform: scale(1.5);"
+                                                                                type="checkbox">
+                                                                </div>
+
+                                                                <div class="col-4">
+
+                                                                        <div class="d-flex align-items-center gap-3">
+
+                                                                                <span class="rounded-circle bg-white fw-bold d-flex align-items-center justify-content-center"
+                                                                                        style="color: #FF6C33; width: 55px; height: 55px; font-size: 22px;">
+                                                                                        AS
+                                                                                </span>
+
+                                                                                <div class="text-start">
+
+                                                                                        <span
+                                                                                                class="fw-bold d-block fs-5">
+                                                                                                Adminou Sani
+                                                                                        </span>
+
+                                                                                        <span
+                                                                                                style="font-size: 14px; color: #e2e2e2;">
+                                                                                                adminou.sani@example.com
+                                                                                        </span>
+
+                                                                                </div>
+
                                                                         </div>
-                                                                        <div class="lh-1 text-white">
-                                                                                <h6>Adminou Sani</h6>
-                                                                                <span>Adminou@mail.com</span>
+
+                                                                </div>
+
+                                                                <div class="col-2 fw-semibold">
+                                                                        Administrateur
+                                                                </div>
+
+                                                                <div class="col-2">
+                                                                        <span class="fw-bold text-light">
+                                                                                inactive
+                                                                        </span>
+                                                                </div>
+
+                                                                <div class="col-3">
+
+                                                                        <div
+                                                                                class="d-flex justify-content-center gap-4 fs-4">
+
+                                                                                <i class="bi bi-pen"></i>
+
+                                                                                <i
+                                                                                        class="bi bi-trash cursor-pointer"></i>
+
+                                                                                <i
+                                                                                        class="bi bi-three-dots-vertical cursor-pointer"></i>
+
                                                                         </div>
-                                                                </td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">Administrateur</td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">inactive</td>
-                                                                <td class="gap-3 text-white" role="button"><i
-                                                                                class="bi bi-pen fs-4"></i><i
-                                                                                class="bi bi-trash3 fs-4"></i><i
-                                                                                class="bi bi-three-dots-vertical fs-4"></i>
-                                                                </td>
-                                                        </tr>
-                                                        <tr>
-                                                                <th scope="row"><input
-                                                                                style="transform: scale(1.9); background-color: transparent !important;"
-                                                                                type="checkbox" id=""></th>
-                                                                <td class="d-flex align-items-center gap-3">
-                                                                        <div>
-                                                                                <span class="rounded-circle bg-white p-2 fs-5"
-                                                                                        style="color: #FF6C33; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">AI</span>
+
+                                                                </div>
+
+                                                        </div>
+
+                                                </div>
+
+                                        </div>
+                                        <div class="card border-0 text-white mb-3 rounded"
+                                                style="background-color: rgba(255,255,255,0.18);">
+
+                                                <div class="card-body py-4">
+
+                                                        <div class="row align-items-center text-center">
+
+                                                                <div class="col-1 text-start">
+                                                                        <input style="transform: scale(1.5);"
+                                                                                type="checkbox">
+                                                                </div>
+
+                                                                <div class="col-4">
+
+                                                                        <div class="d-flex align-items-center gap-3">
+
+                                                                                <span class="rounded-circle bg-white fw-bold d-flex align-items-center justify-content-center"
+                                                                                        style="color: #FF6C33; width: 55px; height: 55px; font-size: 22px;">
+                                                                                        AS
+                                                                                </span>
+
+                                                                                <div class="text-start">
+
+                                                                                        <span
+                                                                                                class="fw-bold d-block fs-5">
+                                                                                                Adminou Sani
+                                                                                        </span>
+
+                                                                                        <span
+                                                                                                style="font-size: 14px; color: #e2e2e2;">
+                                                                                                adminou.sani@example.com
+                                                                                        </span>
+
+                                                                                </div>
+
                                                                         </div>
-                                                                        <div class="lh-1 text-white">
-                                                                                <h6>Analysatou idi</h6>
-                                                                                <span>Analysatou@mail.com</span>
+
+                                                                </div>
+
+                                                                <div class="col-2 fw-semibold">
+                                                                        Administrateur
+                                                                </div>
+
+                                                                <div class="col-2">
+                                                                        <span class="fw-bold text-light">
+                                                                                inactive
+                                                                        </span>
+                                                                </div>
+
+                                                                <div class="col-3">
+
+                                                                        <div
+                                                                                class="d-flex justify-content-center gap-4 fs-4">
+
+                                                                                <i class="bi bi-pen"></i>
+
+                                                                                <i
+                                                                                        class="bi bi-trash cursor-pointer"></i>
+
+                                                                                <i
+                                                                                        class="bi bi-three-dots-vertical cursor-pointer"></i>
+
                                                                         </div>
-                                                                </td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">Marketeurs</td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">inactive</td>
-                                                                <td class="gap-3 text-white" role="button"><i
-                                                                                class="bi bi-pen fs-4"></i><i
-                                                                                class="bi bi-trash3 fs-4"></i><i
-                                                                                class="bi bi-three-dots-vertical fs-4"></i>
-                                                                </td>
-                                                        </tr>
-                                                        <tr>
-                                                                <th scope="row"><input
-                                                                                style="transform: scale(1.9); background-color: transparent !important;"
-                                                                                type="checkbox" id=""></th>
-                                                                <td class="d-flex align-items-center gap-3">
-                                                                        <div>
-                                                                                <span class="rounded-circle bg-white p-2 fs-5"
-                                                                                        style="color: #FF6C33; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">BT</span>
+
+                                                                </div>
+
+                                                        </div>
+
+                                                </div>
+
+                                        </div>
+                                        <div class="card border-0 text-white mb-3 rounded"
+                                                style="background-color: rgba(255,255,255,0.18);">
+
+                                                <div class="card-body py-4">
+
+                                                        <div class="row align-items-center text-center">
+
+                                                                <div class="col-1 text-start">
+                                                                        <input style="transform: scale(1.5);"
+                                                                                type="checkbox">
+                                                                </div>
+
+                                                                <div class="col-4">
+
+                                                                        <div class="d-flex align-items-center gap-3">
+
+                                                                                <span class="rounded-circle bg-white fw-bold d-flex align-items-center justify-content-center"
+                                                                                        style="color: #FF6C33; width: 55px; height: 55px; font-size: 22px;">
+                                                                                        AS
+                                                                                </span>
+
+                                                                                <div class="text-start">
+
+                                                                                        <span
+                                                                                                class="fw-bold d-block fs-5">
+                                                                                                Adminou Sani
+                                                                                        </span>
+
+                                                                                        <span
+                                                                                                style="font-size: 14px; color: #e2e2e2;">
+                                                                                                adminou.sani@example.com
+                                                                                        </span>
+
+                                                                                </div>
+
                                                                         </div>
-                                                                        <div class="lh-1 text-white">
-                                                                                <h6>Bako Tondi</h6>
-                                                                                <span>Bako@mail.com</span>
+
+                                                                </div>
+
+                                                                <div class="col-2 fw-semibold">
+                                                                        Administrateur
+                                                                </div>
+
+                                                                <div class="col-2">
+                                                                        <span class="fw-bold text-light">
+                                                                                inactive
+                                                                        </span>
+                                                                </div>
+
+                                                                <div class="col-3">
+
+                                                                        <div
+                                                                                class="d-flex justify-content-center gap-4 fs-4">
+
+                                                                                <i class="bi bi-pen"></i>
+
+                                                                                <i
+                                                                                        class="bi bi-trash cursor-pointer"></i>
+
+                                                                                <i
+                                                                                        class="bi bi-three-dots-vertical cursor-pointer"></i>
+
                                                                         </div>
-                                                                </td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">Controleur</td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">active</td>
-                                                                <td class="gap-3 text-white" role="button"><i
-                                                                                class="bi bi-pen fs-4"></i><i
-                                                                                class="bi bi-trash3 fs-4"></i><i
-                                                                                class="bi bi-three-dots-vertical fs-4"></i>
-                                                                </td>
-                                                        </tr>
-                                                        <tr>
-                                                                <th scope="row"><input
-                                                                                style="transform: scale(1.9); background-color: transparent !important;"
-                                                                                type="checkbox" id=""></th>
-                                                                <td class="d-flex align-items-center gap-3">
-                                                                        <div>
-                                                                                <span class="rounded-circle bg-white p-2 fs-5"
-                                                                                        style="color: #FF6C33; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">TT</span>
+
+                                                                </div>
+
+                                                        </div>
+
+                                                </div>
+
+                                        </div>
+                                        <div class="card border-0 text-white mb-3 rounded"
+                                                style="background-color: rgba(255,255,255,0.18);">
+
+                                                <div class="card-body py-4">
+
+                                                        <div class="row align-items-center text-center">
+
+                                                                <div class="col-1 text-start">
+                                                                        <input style="transform: scale(1.5);"
+                                                                                type="checkbox">
+                                                                </div>
+
+                                                                <div class="col-4">
+
+                                                                        <div class="d-flex align-items-center gap-3">
+
+                                                                                <span class="rounded-circle bg-white fw-bold d-flex align-items-center justify-content-center"
+                                                                                        style="color: #FF6C33; width: 55px; height: 55px; font-size: 22px;">
+                                                                                        AS
+                                                                                </span>
+
+                                                                                <div class="text-start">
+
+                                                                                        <span
+                                                                                                class="fw-bold d-block fs-5">
+                                                                                                Adminou Sani
+                                                                                        </span>
+
+                                                                                        <span
+                                                                                                style="font-size: 14px; color: #e2e2e2;">
+                                                                                                adminou.sani@example.com
+                                                                                        </span>
+
+                                                                                </div>
+
                                                                         </div>
-                                                                        <div class="lh-1 text-white">
-                                                                                <h6>Tchanga Tonko</h6>
-                                                                                <span>Tchanga@mail.com</span>
+
+                                                                </div>
+
+                                                                <div class="col-2 fw-semibold">
+                                                                        Administrateur
+                                                                </div>
+
+                                                                <div class="col-2">
+                                                                        <span class="fw-bold text-light">
+                                                                                inactive
+                                                                        </span>
+                                                                </div>
+
+                                                                <div class="col-3">
+
+                                                                        <div
+                                                                                class="d-flex justify-content-center gap-4 fs-4">
+
+                                                                                <i class="bi bi-pen"></i>
+
+                                                                                <i
+                                                                                        class="bi bi-trash cursor-pointer"></i>
+
+                                                                                <i
+                                                                                        class="bi bi-three-dots-vertical cursor-pointer"></i>
+
                                                                         </div>
-                                                                </td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">Administrateur</td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">inactive</td>
-                                                                <td class="gap-3 text-white" role="button"><i
-                                                                                class="bi bi-pen fs-4"></i><i
-                                                                                class="bi bi-trash3 fs-4"></i><i
-                                                                                class="bi bi-three-dots-vertical fs-4"></i>
-                                                                </td>
-                                                        </tr>
-                                                        <tr>
-                                                                <th scope="row"><input
-                                                                                style="transform: scale(1.9); background-color: transparent !important;"
-                                                                                type="checkbox" id=""></th>
-                                                                <td class="d-flex align-items-center gap-3">
-                                                                        <div>
-                                                                                <span class="rounded-circle bg-white p-2 fs-5"
-                                                                                        style="color: #FF6C33; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">GS</span>
+
+                                                                </div>
+
+                                                        </div>
+
+                                                </div>
+
+                                        </div>
+                                        <div class="card border-0 text-white mb-3 rounded"
+                                                style="background-color: rgba(255,255,255,0.18);">
+
+                                                <div class="card-body py-4">
+
+                                                        <div class="row align-items-center text-center">
+
+                                                                <div class="col-1 text-start">
+                                                                        <input style="transform: scale(1.5);"
+                                                                                type="checkbox">
+                                                                </div>
+
+                                                                <div class="col-4">
+
+                                                                        <div class="d-flex align-items-center gap-3">
+
+                                                                                <span class="rounded-circle bg-white fw-bold d-flex align-items-center justify-content-center"
+                                                                                        style="color: #FF6C33; width: 55px; height: 55px; font-size: 22px;">
+                                                                                        AS
+                                                                                </span>
+
+                                                                                <div class="text-start">
+
+                                                                                        <span
+                                                                                                class="fw-bold d-block fs-5">
+                                                                                                Adminou Sani
+                                                                                        </span>
+
+                                                                                        <span
+                                                                                                style="font-size: 14px; color: #e2e2e2;">
+                                                                                                adminou.sani@example.com
+                                                                                        </span>
+
+                                                                                </div>
+
                                                                         </div>
-                                                                        <div class="lh-1 text-white">
-                                                                                <h6>Gambo Shehu</h6>
-                                                                                <span>Gambo@mail.com</span>
+
+                                                                </div>
+
+                                                                <div class="col-2 fw-semibold">
+                                                                        Administrateur
+                                                                </div>
+
+                                                                <div class="col-2">
+                                                                        <span class="fw-bold text-light">
+                                                                                inactive
+                                                                        </span>
+                                                                </div>
+
+                                                                <div class="col-3">
+
+                                                                        <div
+                                                                                class="d-flex justify-content-center gap-4 fs-4">
+
+                                                                                <i class="bi bi-pen"></i>
+
+                                                                                <i
+                                                                                        class="bi bi-trash cursor-pointer"></i>
+
+                                                                                <i
+                                                                                        class="bi bi-three-dots-vertical cursor-pointer"></i>
+
                                                                         </div>
-                                                                </td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">Administrateur</td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">inactive</td>
-                                                                <td class="gap-3 text-white" role="button"><i
-                                                                                class="bi bi-pen fs-4"></i><i
-                                                                                class="bi bi-trash3 fs-4"></i><i
-                                                                                class="bi bi-three-dots-vertical fs-4"></i>
-                                                                </td>
-                                                        </tr>
-                                                        <tr>
-                                                                <th scope="row"><input
-                                                                                style="transform: scale(1.9); background-color: transparent !important;"
-                                                                                type="checkbox" id=""></th>
-                                                                <td class="d-flex align-items-center gap-3">
-                                                                        <div>
-                                                                                <span class="rounded-circle bg-white p-2 fs-5"
-                                                                                        style="color: #FF6C33; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">TD</span>
-                                                                        </div>
-                                                                        <div class="lh-1 text-white">
-                                                                                <h6>Tchanga Djibo</h6>
-                                                                                <span>Djibo@mail.com</span>
-                                                                        </div>
-                                                                </td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">Administrateur</td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">inactive</td>
-                                                                <td class="gap-3 text-white" role="button"><i
-                                                                                class="bi bi-pen fs-4"></i><i
-                                                                                class="bi bi-trash3 fs-4"></i><i
-                                                                                class="bi bi-three-dots-vertical fs-4"></i>
-                                                                </td>
-                                                        </tr>
-                                                        <tr>
-                                                                <th scope="row"><input
-                                                                                style="transform: scale(1.9); background-color: transparent !important;"
-                                                                                type="checkbox" id=""></th>
-                                                                <td class="d-flex align-items-center gap-3">
-                                                                        <div>
-                                                                                <span class="rounded-circle bg-white fs-5"
-                                                                                        style="color: #FF6C33; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">AS</span>
-                                                                        </div>
-                                                                        <div class="lh-1 text-white">
-                                                                                <h6>Adminou Sani</h6>
-                                                                                <span>Adminou@mail.com</span>
-                                                                        </div>
-                                                                </td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">Administrateur</td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">inactive</td>
-                                                                <td class="gap-3 text-white" role="button"><i
-                                                                                class="bi bi-pen fs-4"></i><i
-                                                                                class="bi bi-trash3 fs-4"></i><i
-                                                                                class="bi bi-three-dots-vertical fs-4"></i>
-                                                                </td>
-                                                        </tr>
-                                                        <tr>
-                                                                <th scope="row"><input
-                                                                                style="transform: scale(1.9); background-color: transparent !important;"
-                                                                                type="checkbox" id=""></th>
-                                                                <td class="d-flex align-items-center gap-3">
-                                                                        <div>
-                                                                                <span class="rounded-circle bg-white p-2 fs-5"
-                                                                                        style="color: #FF6C33; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">AI</span>
-                                                                        </div>
-                                                                        <div class="lh-1 text-white">
-                                                                                <h6>Analysatou idi</h6>
-                                                                                <span>Analysatou@mail.com</span>
-                                                                        </div>
-                                                                </td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">Marketeurs</td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">inactive</td>
-                                                                <td class="gap-3 text-white" role="button"><i
-                                                                                class="bi bi-pen fs-4"></i><i
-                                                                                class="bi bi-trash3 fs-4"></i><i
-                                                                                class="bi bi-three-dots-vertical fs-4"></i>
-                                                                </td>
-                                                        </tr>
-                                                        <tr>
-                                                                <th scope="row"><input
-                                                                                style="transform: scale(1.9); background-color: transparent !important;"
-                                                                                type="checkbox" id=""></th>
-                                                                <td class="d-flex align-items-center gap-3">
-                                                                        <div>
-                                                                                <span class="rounded-circle bg-white p-2 fs-5"
-                                                                                        style="color: #FF6C33; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">BT</span>
-                                                                        </div>
-                                                                        <div class="lh-1 text-white">
-                                                                                <h6>Bako Tondi</h6>
-                                                                                <span>Bako@mail.com</span>
-                                                                        </div>
-                                                                </td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">Controleur</td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">active</td>
-                                                                <td class="gap-3 text-white" role="button"><i
-                                                                                class="bi bi-pen fs-4"></i><i
-                                                                                class="bi bi-trash3 fs-4"></i><i
-                                                                                class="bi bi-three-dots-vertical fs-4"></i>
-                                                                </td>
-                                                        </tr>
-                                                        <tr>
-                                                                <th scope="row"><input
-                                                                                style="transform: scale(1.9); background-color: transparent !important;"
-                                                                                type="checkbox" id=""></th>
-                                                                <td class="d-flex align-items-center gap-3">
-                                                                        <div>
-                                                                                <span class="rounded-circle bg-white p-2 fs-5"
-                                                                                        style="color: #FF6C33; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">TT</span>
-                                                                        </div>
-                                                                        <div class="lh-1 text-white">
-                                                                                <h6>Tchanga Tonko</h6>
-                                                                                <span>Tchanga@mail.com</span>
-                                                                        </div>
-                                                                </td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">Administrateur</td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">inactive</td>
-                                                                <td class="gap-3 text-white" role="button"><i
-                                                                                class="bi bi-pen fs-4"></i><i
-                                                                                class="bi bi-trash3 fs-4"></i><i
-                                                                                class="bi bi-three-dots-vertical fs-4"></i>
-                                                                </td>
-                                                        </tr>
-                                                        <tr>
-                                                                <th scope="row"><input
-                                                                                style="transform: scale(1.9); background-color: transparent !important;"
-                                                                                type="checkbox" id=""></th>
-                                                                <td class="d-flex align-items-center gap-3">
-                                                                        <div>
-                                                                                <span class="rounded-circle bg-white p-2 fs-5"
-                                                                                        style="color: #FF6C33; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">GS</span>
-                                                                        </div>
-                                                                        <div class="lh-1 text-white">
-                                                                                <h6>Gambo Shehu</h6>
-                                                                                <span>Gambo@mail.com</span>
-                                                                        </div>
-                                                                </td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">Administrateur</td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">inactive</td>
-                                                                <td class="gap-3 text-white" role="button"><i
-                                                                                class="bi bi-pen fs-4"></i><i
-                                                                                class="bi bi-trash3 fs-4"></i><i
-                                                                                class="bi bi-three-dots-vertical fs-4"></i>
-                                                                </td>
-                                                        </tr>
-                                                        <tr>
-                                                                <th scope="row"><input
-                                                                                style="transform: scale(1.9); background-color: transparent !important;"
-                                                                                type="checkbox" id=""></th>
-                                                                <td class="d-flex align-items-center gap-3">
-                                                                        <div>
-                                                                                <span class="rounded-circle bg-white p-2 fs-5"
-                                                                                        style="color: #FF6C33; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">TD</span>
-                                                                        </div>
-                                                                        <div class="lh-1 text-white">
-                                                                                <h6>Tchanga Djibo</h6>
-                                                                                <span>Djibo@mail.com</span>
-                                                                        </div>
-                                                                </td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">Administrateur</td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">inactive</td>
-                                                                <td class="gap-3 text-white" role="button"><i
-                                                                                class="bi bi-pen fs-4"></i><i
-                                                                                class="bi bi-trash3 fs-4"></i><i
-                                                                                class="bi bi-three-dots-vertical fs-4"></i>
-                                                                </td>
-                                                        </tr>
-                                                        <tr>
-                                                                <th scope="row"><input
-                                                                                style="transform: scale(1.9); background-color: transparent !important;"
-                                                                                type="checkbox" id=""></th>
-                                                                <td class="d-flex align-items-center gap-3">
-                                                                        <div>
-                                                                                <span class="rounded-circle bg-white fs-5"
-                                                                                        style="color: #FF6C33; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">AS</span>
-                                                                        </div>
-                                                                        <div class="lh-1 text-white">
-                                                                                <h6>Adminou Sani</h6>
-                                                                                <span>Adminou@mail.com</span>
-                                                                        </div>
-                                                                </td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">Administrateur</td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">inactive</td>
-                                                                <td class="gap-3 text-white" role="button"><i
-                                                                                class="bi bi-pen fs-4"></i><i
-                                                                                class="bi bi-trash3 fs-4"></i><i
-                                                                                class="bi bi-three-dots-vertical fs-4"></i>
-                                                                </td>
-                                                        </tr>
-                                                        <tr>
-                                                                <th scope="row"><input
-                                                                                style="transform: scale(1.9); background-color: transparent !important;"
-                                                                                type="checkbox" id=""></th>
-                                                                <td class="d-flex align-items-center gap-3">
-                                                                        <div>
-                                                                                <span class="rounded-circle bg-white p-2 fs-5"
-                                                                                        style="color: #FF6C33; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">AI</span>
-                                                                        </div>
-                                                                        <div class="lh-1 text-white">
-                                                                                <h6>Analysatou idi</h6>
-                                                                                <span>Analysatou@mail.com</span>
-                                                                        </div>
-                                                                </td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">Marketeurs</td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">inactive</td>
-                                                                <td class="gap-3 text-white" role="button"><i
-                                                                                class="bi bi-pen fs-4"></i><i
-                                                                                class="bi bi-trash3 fs-4"></i><i
-                                                                                class="bi bi-three-dots-vertical fs-4"></i>
-                                                                </td>
-                                                        </tr>
-                                                        <tr>
-                                                                <th scope="row"><input
-                                                                                style="transform: scale(1.9); background-color: transparent !important;"
-                                                                                type="checkbox" id=""></th>
-                                                                <td class="d-flex align-items-center gap-3">
-                                                                        <div>
-                                                                                <span class="rounded-circle bg-white p-2 fs-5"
-                                                                                        style="color: #FF6C33; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">BT</span>
-                                                                        </div>
-                                                                        <div class="lh-1 text-white">
-                                                                                <h6>Bako Tondi</h6>
-                                                                                <span>Bako@mail.com</span>
-                                                                        </div>
-                                                                </td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">Controleur</td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">active</td>
-                                                                <td class="gap-3 text-white" role="button"><i
-                                                                                class="bi bi-pen fs-4"></i><i
-                                                                                class="bi bi-trash3 fs-4"></i><i
-                                                                                class="bi bi-three-dots-vertical fs-4"></i>
-                                                                </td>
-                                                        </tr>
-                                                        <tr>
-                                                                <th scope="row"><input
-                                                                                style="transform: scale(1.9); background-color: transparent !important;"
-                                                                                type="checkbox" id=""></th>
-                                                                <td class="d-flex align-items-center gap-3">
-                                                                        <div>
-                                                                                <span class="rounded-circle bg-white p-2 fs-5"
-                                                                                        style="color: #FF6C33; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">TT</span>
-                                                                        </div>
-                                                                        <div class="lh-1 text-white">
-                                                                                <h6>Tchanga Tonko</h6>
-                                                                                <span>Tchanga@mail.com</span>
-                                                                        </div>
-                                                                </td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">Administrateur</td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">inactive</td>
-                                                                <td class="gap-3 text-white" role="button"><i
-                                                                                class="bi bi-pen fs-4"></i><i
-                                                                                class="bi bi-trash3 fs-4"></i><i
-                                                                                class="bi bi-three-dots-vertical fs-4"></i>
-                                                                </td>
-                                                        </tr>
-                                                        <tr>
-                                                                <th scope="row"><input
-                                                                                style="transform: scale(1.9); background-color: transparent !important;"
-                                                                                type="checkbox" id=""></th>
-                                                                <td class="d-flex align-items-center gap-3">
-                                                                        <div>
-                                                                                <span class="rounded-circle bg-white p-2 fs-5"
-                                                                                        style="color: #FF6C33; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">GS</span>
-                                                                        </div>
-                                                                        <div class="lh-1 text-white">
-                                                                                <h6>Gambo Shehu</h6>
-                                                                                <span>Gambo@mail.com</span>
-                                                                        </div>
-                                                                </td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">Administrateur</td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">inactive</td>
-                                                                <td class="gap-3 text-white" role="button"><i
-                                                                                class="bi bi-pen fs-4"></i><i
-                                                                                class="bi bi-trash3 fs-4"></i><i
-                                                                                class="bi bi-three-dots-vertical fs-4"></i>
-                                                                </td>
-                                                        </tr>
-                                                        <tr>
-                                                                <th scope="row"><input
-                                                                                style="transform: scale(1.9); background-color: transparent !important;"
-                                                                                type="checkbox" id=""></th>
-                                                                <td class="d-flex align-items-center gap-3">
-                                                                        <div>
-                                                                                <span class="rounded-circle bg-white p-2 fs-5"
-                                                                                        style="color: #FF6C33; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">TD</span>
-                                                                        </div>
-                                                                        <div class="lh-1 text-white">
-                                                                                <h6>Tchanga Djibo</h6>
-                                                                                <span>Djibo@mail.com</span>
-                                                                        </div>
-                                                                </td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">Administrateur</td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="text-white">inactive</td>
-                                                                <td class="gap-3 text-white" role="button"><i
-                                                                                class="bi bi-pen fs-4"></i><i
-                                                                                class="bi bi-trash3 fs-4"></i><i
-                                                                                class="bi bi-three-dots-vertical fs-4"></i>
-                                                                </td>
-                                                        </tr>
-                                                </tbody>
-                                        </table>
+
+                                                                </div>
+
+                                                        </div>
+
+                                                </div>
+
+                                        </div>
                                 </div>
                         </div>
                 </div>

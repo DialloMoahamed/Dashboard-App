@@ -4,6 +4,7 @@ body {
   overflow: hidden;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow-x: hidden;
+  border: none !important;
 }
 
 .bg {
@@ -36,66 +37,74 @@ body {
   }
 }
 
-
 .liste {
   padding: 10px;
   border-radius: 10px;
   display: flex;
   align-items: center;
-  /* transition: 0.3s; */
 }
 
 .liste:hover {
-  background-color: #A9A9A9;
-  /* transform: translateY(-3px); */
+  background-color: #a9a9a9;
   cursor: pointer;
 }
 
 .liste.active {
-  background-color: #FF6C33;
+  background-color: #ff6c33;
 }
 
-
-.table td,
-.table th {
-    background-color: transparent !important;
+.custom-search::placeholder {
+  color: white;
+  opacity: 1;
+  font-size: small;
 }
 
-.custom-search::placeholder{
-    color: white;
-    opacity: 1; 
-    font-size: small;
+.nav-card {
+  background: transparent;
+  border: none;
+  padding: 0;
 }
 
-.nav-card{
-    background: transparent;
-    border: none;
-    padding: 0;
+.nav-card .card {
+  background-color: transparent;
+  border-radius: 15px;
+  transition: 0.3s;
+  color: white;
 }
 
-.nav-card .card{
-    background-color: transparent;
-    border-radius: 15px;
-    transition: 0.3s;
-    color: white;
+.nav-card:hover .card {
+  background-color: #6f6f6fae;
+  transform: translateY(-3px);
 }
 
-.nav-card:hover .card{
-    background-color: #6f6f6fae;
-    transform: translateY(-3px);
+.nav-card.active .card {
+  background-color: #ffffff22;
+  border: 1px solid white;
 }
-
-.nav-card.active .card{
-    background-color: #ffffff22;
-    border: 1px solid white;
-}
-
 
 .tab-content > .tab-pane {
-    display: none !important;
+  display: none !important;
 }
 
 .tab-content > .active {
-    display: block !important;
+  display: block !important;
 }
 
+.map-container {
+  position: relative;
+}
+
+
+.region {
+  fill: #ff7b39;
+  stroke: white;
+  stroke-width: 2;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.region:hover {
+  fill: #ffd0b3;
+  filter: drop-shadow(0 0 12px #ff7b39);
+  transform: scale(1.01);
+}
