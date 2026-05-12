@@ -94,7 +94,6 @@ body {
   position: relative;
 }
 
-
 .region {
   fill: #ff7b39;
   stroke: white;
@@ -107,4 +106,18 @@ body {
   fill: #ffd0b3;
   filter: drop-shadow(0 0 12px #ff7b39);
   transform: scale(1.01);
+}
+
+.card {
+  box-shadow: -6px -1px 23px -2px rgba(0, 0, 0, 0.18) !important;
+}
+
+/* Masquer la scrollbar sur tous les éléments */
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
